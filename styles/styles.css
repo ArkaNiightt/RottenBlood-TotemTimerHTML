@@ -1,6 +1,7 @@
 @import url(loader.css);
 @import url(github.css);
 @import url(buttons.css);
+@import url(select_theme.css);
 
 body {
     display: flex;
@@ -9,6 +10,14 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f0f8ff;
+}
+
+body.dark-mode {
+    background-color: #262730;
+}
+
+body.light-mode {
+    background-color: #ffffff;
 }
 
 .container {
@@ -39,15 +48,30 @@ body {
     background: #e3edf7;
     border-radius: 10px;
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+        -2px -2px 5px -1px rgba(61, 61, 61, 0.7);
     border: 1px solid rgba(0, 0, 0, 0);
     transition: background-color 0.5s ease, transform 0.5s ease;
+    cursor: default;
 }
+
+.box:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 
 #norte {
     top: 0;
     left: 125px;
     margin-bottom: 15px;
+}
+
+#norte:hover {
+    transform: translateY(-0.5rem);
 }
 
 #direita {
@@ -56,16 +80,28 @@ body {
     margin-left: 15px;
 }
 
+#direita:hover {
+    transform: translateX(0.5rem);
+}
+
 #sul {
     bottom: 0;
     left: 125px;
     margin-top: 15px;
 }
 
+#sul:hover {
+    transform: translateY(0.5rem);
+}
+
 #esquerda {
     top: 125px;
     left: 0;
     margin-right: 15px;
+}
+
+#esquerda:hover {
+    transform: translateX(-0.5rem);
 }
 
 .timer {
@@ -82,11 +118,18 @@ body {
     font-weight: bold;
     border-radius: 50%;
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+        -2px -2px 5px -1px rgba(61, 61, 61, 0.7);
     border: 1px solid rgba(0, 0, 0, 0);
     background: #e3edf7;
     transition: background-color 0.5s ease, transform 0.5s ease;
+    cursor: default;
 }
 
-
-
+.timer:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}

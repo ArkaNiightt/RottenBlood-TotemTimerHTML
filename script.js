@@ -98,3 +98,33 @@ document.getElementById("stop-button").addEventListener("click", () => {
         timerElement.style.transform = "scale(1)";
     }, 200); // Redefinir a escala após 200ms
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleSwitch = document.getElementById("color_mode");
+    const body = document.body;
+
+    // Função para alternar o tema
+    function switchTheme(event) {
+        if (event.target.checked) {
+            body.classList.add("dark-mode");
+            body.classList.remove("light-mode");
+            localStorage.setItem("theme", "dark");
+        } else {
+            body.classList.add("light-mode");
+            body.classList.remove("dark-mode");
+            localStorage.setItem("theme", "light");
+        }
+    }
+
+    // Checar tema salvo no localStorage ao carregar a página
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme) {
+        body.classList.add(
+            currentTheme === "dark" ? "dark-mode" : "light-mode"
+        );
+        toggleSwitch.checked = currentTheme === "dark";
+    }
+
+    // Listener para o checkbox
+    toggleSwitch.addEventListener("change", switchTheme);
+});
