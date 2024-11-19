@@ -1,0 +1,124 @@
+@import url(loader.css);
+@import url(github.css);
+@import url(buttons.css);
+@import url(fo);
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.rose-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.box {
+    color: #0d1117;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Gravitas One", serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    place-items: center;
+    background: #e3edf7;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+#norte {
+    top: 0;
+    left: 125px;
+    margin-bottom: 15px;
+}
+
+#direita {
+    top: 125px;
+    right: 0;
+    margin-left: 15px;
+}
+
+#sul {
+    bottom: 0;
+    left: 125px;
+    margin-top: 15px;
+}
+
+#esquerda {
+    top: 125px;
+    left: 0;
+    margin-right: 15px;
+}
+
+.timer {
+    position: absolute;
+    top: 125px;
+    left: 125px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+    background: #e3edf7;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+/* button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.func_button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.func_button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#stop-button {
+    background-color: #b30000;
+}
+
+#stop-button:hover {
+    background-color: #800000;
+} */
+
+
