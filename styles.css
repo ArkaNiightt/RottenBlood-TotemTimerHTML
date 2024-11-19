@@ -124,8 +124,6 @@ body {
     padding: 0;
     outline: none;
     cursor: pointer;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
     margin-top: 40px;
     
   }
@@ -167,6 +165,8 @@ body {
     align-items: center;
     justify-content: center;
     padding: 12px 28px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
     font-size: 1.25rem;
     color: white;
     background: hsl(217, 33%, 17%);
