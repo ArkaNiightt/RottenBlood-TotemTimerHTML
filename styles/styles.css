@@ -1,7 +1,6 @@
 @import url(loader.css);
 @import url(github.css);
 @import url(buttons.css);
-@import url(fo);
 
 body {
     display: flex;
@@ -89,36 +88,5 @@ body {
     transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
-/* button {
-    margin-top: 20px;
-    padding: 12px 30px;
-    font-size: 1rem;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-}
-
-.func_button:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-.func_button:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#stop-button {
-    background-color: #b30000;
-}
-
-#stop-button:hover {
-    background-color: #800000;
-} */
 
 
