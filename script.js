@@ -30,27 +30,28 @@ function startTimer() {
     // Limpar qualquer intervalo existente para evitar múltiplos temporizadores rodando simultaneamente
     clearInterval(interval);
     let count = 5;
-    timerElement.textContent = count;
-    // Destacar a direção atual no início
-    highlightDirection(directions[currentDirectionIndex], count);
 
-    // Configurar o intervalo para atualizar o temporizador a cada segundo
-    interval = setInterval(() => {
-        count--;
-        // Atualizar o temporizador e destacar a direção atual
-        if (count >= 0) {
+    // Função para atualizar o temporizador e a direção
+    function updateTimer() {
+        if (count > 0) {
+            count--;
+            timerElement.textContent = count;
+            highlightDirection(directions[currentDirectionIndex], count);
+        } else {
+            currentDirectionIndex =
+                (currentDirectionIndex + 1) % directions.length;
+            count = 5;
             timerElement.textContent = count;
             highlightDirection(directions[currentDirectionIndex], count);
         }
+    }
 
-        // Quando a contagem regressiva chegar a zero, mudar para a próxima direção
-        if (count === 0) {
-            currentDirectionIndex =
-                (currentDirectionIndex + 1) % directions.length;
-            count = 5; // Reiniciar a contagem regressiva para a próxima direção
-            highlightDirection(directions[currentDirectionIndex], count);
-        }
-    }, 1000); // Intervalo de 1000ms para contagem regressiva de 1 segundo
+    // Iniciar imediatamente com a primeira direção
+    timerElement.textContent = count;
+    highlightDirection(directions[currentDirectionIndex], count);
+
+    // Configurar o intervalo para atualizar o temporizador a cada segundo
+    interval = setInterval(updateTimer, 1000);
 }
 
 // Parar o temporizador e redefinir a interface
@@ -66,7 +67,6 @@ function stopTimer() {
     });
     timerElement.style.backgroundColor = "#fff"; // Redefinir a cor do temporizador para branco
 }
-
 // Event listeners para os botões de iniciar e parar
 document.getElementById("start-button").addEventListener("click", startTimer);
 document.getElementById("stop-button").addEventListener("click", stopTimer);
